@@ -12,8 +12,6 @@ A simple RESTful API for managing a book library system.
   - [Search](#search)
   - [Ratings](#ratings)
 - [Assumptions and Design Decisions](#assumptions-and-design-decisions)
-- [Documentation Conventions](#documentation-conventions)
-- [Bonus Points (Optional)](#bonus-points-optional)
 
 ## Setup and Running Instructions
 
@@ -49,10 +47,16 @@ A simple RESTful API for managing a book library system.
     python manage.py laod_data
     ```
 
-6. **Start the server.**
+6. **Run Pytest.**
 
     ```bash
-    python manage.py runserver
+    pytest
+    ```
+
+7. **Start the server.**
+
+    ```bash
+    python manage.py runserver --insecure
     ```
 
 ## API Endpoints
