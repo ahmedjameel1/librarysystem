@@ -20,8 +20,8 @@ A simple RESTful API for managing a book library system.
 1. **Clone the repository.**
 
     ```bash
-    git clone <repository_url>
-    cd <repository_directory>
+    git clone https://github.com/ahmedjameel1/librarysystem.git
+    cd librarysystem
     ```
 
 2. **Create a virtual environment and activate it.**
