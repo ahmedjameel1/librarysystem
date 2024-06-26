@@ -1,4 +1,3 @@
-```markdown
 # Library API
 
 ## Project Overview
@@ -172,4 +171,3 @@ To access the endpoints, you either have to be authenticated or send the `api_ke
 - Environment variables are used for configuration to enhance security and flexibility.
 - API uses token-based authentication for securing endpoints.
 - Basic pagination and filtering for listing endpoints.
-```
