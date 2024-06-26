@@ -2,7 +2,6 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 from django.contrib.auth import authenticate
 
-
 class UserSerializer(serializers.ModelSerializer):
     """
     Serializer for user registration.
@@ -30,19 +29,27 @@ class UserSerializer(serializers.ModelSerializer):
         if User.objects.filter(email=email).exists():
             raise serializers.ValidationError({'email': 'This email address is already registered.'})
 
-        # Validate first_name and last_name are strings
+        # Validate first_name and last_name are strings without numeric digits
         first_name = attrs.get('first_name', '')
         last_name = attrs.get('last_name', '')
-        if not isinstance(first_name, str):
-            raise serializers.ValidationError({'first_name': 'First name should be a valid string.'})
-        if not isinstance(last_name, str):
-            raise serializers.ValidationError({'last_name': 'Last name should be a valid string.'})
+
+        if not isinstance(first_name, str) or not first_name.isalpha():
+            raise serializers.ValidationError({'first_name': 'First name should be a valid string without numeric digits.'})
+
+        if not isinstance(last_name, str) or not last_name.isalpha():
+            raise serializers.ValidationError({'last_name': 'Last name should be a valid string without numeric digits.'})
 
         # Validate first_name and last_name length
+        if len(first_name.strip()) == 0:
+            raise serializers.ValidationError({'first_name': 'First name cannot be empty.'})
+        if len(last_name.strip()) == 0:
+            raise serializers.ValidationError({'last_name': 'Last name cannot be empty.'})
         if len(first_name) > 30:
             raise serializers.ValidationError({'first_name': 'First name must be 30 characters or fewer.'})
         if len(last_name) > 30:
             raise serializers.ValidationError({'last_name': 'Last name must be 30 characters or fewer.'})
+
+        # You can add more custom validation logic here if needed
 
         return attrs
 
@@ -52,6 +59,7 @@ class UserSerializer(serializers.ModelSerializer):
         """
         user = User.objects.create_user(**validated_data)
         return user
+
     
 class LoginSerializer(serializers.Serializer):
     username = serializers.CharField()
