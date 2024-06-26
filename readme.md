@@ -49,7 +49,13 @@ A simple RESTful API for managing a book library system.
     python manage.py laod_data
     ```
 
-6. **Start the server.**
+6. **Run Pytest.**
+
+    ```bash
+    pytest
+    ```
+
+7. **Start the server.**
 
     ```bash
     python manage.py runserver --insecure
