@@ -52,7 +52,7 @@ A simple RESTful API for managing a book library system.
 6. **Start the server.**
 
     ```bash
-    python manage.py runserver
+    python manage.py runserver --insecure
     ```
 
 ## API Endpoints
