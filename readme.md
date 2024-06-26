@@ -12,8 +12,6 @@ A simple RESTful API for managing a book library system.
   - [Search](#search)
   - [Ratings](#ratings)
 - [Assumptions and Design Decisions](#assumptions-and-design-decisions)
-- [Documentation Conventions](#documentation-conventions)
-- [Bonus Points (Optional)](#bonus-points-optional)
 
 ## Setup and Running Instructions
 
