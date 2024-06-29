@@ -62,7 +62,7 @@ A simple RESTful API for managing a book library system.
 ## API Endpoints
 
 ### Authentication
-To access the endpoints, you either have to be authenticated or send the `api_key` with headers.
+To access the endpoints, you either have to be authenticated or send the `APIKEY` with headers.
 
 #### Register
 - `POST /api/register/`: Register a new user.
