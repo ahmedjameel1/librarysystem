@@ -169,7 +169,7 @@ To access the endpoints, you either have to be authenticated or send the `APIKEY
         ```
 - `DELETE /api/ratings/:id/`: Delete a rating.
 
-##Dockerizing
+## Dockerizing
 
 - inside the root directory where you have `docker-compose.yml`
 - open terminal and run `docker-compose build`
