@@ -11,7 +11,7 @@ A simple RESTful API for managing a book library system.
   - [Authors](#authors)
   - [Search](#search)
   - [Ratings](#ratings)
-  - [Dockerizing](#dockerizing)
+- [Dockerizing](#dockerizing)
 - [Assumptions and Design Decisions](#assumptions-and-design-decisions)
 
 ## Setup and Running Instructions
