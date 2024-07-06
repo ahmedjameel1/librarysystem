@@ -11,6 +11,7 @@ A simple RESTful API for managing a book library system.
   - [Authors](#authors)
   - [Search](#search)
   - [Ratings](#ratings)
+  - [Dockerizing](#dockerizing)
 - [Assumptions and Design Decisions](#assumptions-and-design-decisions)
 
 ## Setup and Running Instructions
@@ -62,7 +63,7 @@ A simple RESTful API for managing a book library system.
 ## API Endpoints
 
 ### Authentication
-To access the endpoints, you either have to be authenticated or send the `api_key` with headers.
+To access the endpoints, you either have to be authenticated or send the `APIKEY` with headers.
 
 #### Register
 - `POST /api/register/`: Register a new user.
@@ -167,6 +168,12 @@ To access the endpoints, you either have to be authenticated or send the `api_ke
         }
         ```
 - `DELETE /api/ratings/:id/`: Delete a rating.
+
+## Dockerizing
+
+- inside the root directory where you have `docker-compose.yml`
+- open terminal and run `docker-compose build`
+- then `docker-compose up`
 
 ## Assumptions and Design Decisions
 
