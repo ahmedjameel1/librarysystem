@@ -172,8 +172,7 @@ To access the endpoints, you either have to be authenticated or send the `APIKEY
 ## Dockerizing
 
 - inside the root directory where you have `docker-compose.yml`
-- open terminal and run `docker-compose build`
-- then `docker-compose up`
+- open terminal and run `docker-compose up --build`
 
 ## Assumptions and Design Decisions
 
